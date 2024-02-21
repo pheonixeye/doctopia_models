@@ -38,9 +38,9 @@ class Clinic with _$Clinic {
 
   factory Clinic.fromJson(Map<String, Object?> json) => _$ClinicFromJson(json);
 
-  static ({String id, Clinic clinic}) clinicRecord(
+  static Map<String, Object> clinicRecord(
       String id, Map<String, Object?> json) {
-    return (id: id, clinic: Clinic.fromJson(json));
+    return {"id": id, "clinic": Clinic.fromJson(json)};
   }
 
   factory Clinic.initial() {
